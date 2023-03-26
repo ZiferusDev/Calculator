@@ -1,9 +1,9 @@
 import React from "react";
-import Components from "./components/Components";
+import Fields from "./components/Fields";
 
 function App() {
     return (
-        <Components />
+        <Fields />
     )
 }
 

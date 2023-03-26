@@ -1,5 +1,6 @@
 import React from "react";
-import InputValue from "./InputValue";
+import Button from "./Button";
+import { OutputContext } from "./Fields";
 
 export default function Operations (props) {
 
@@ -7,14 +8,12 @@ export default function Operations (props) {
         "/", "x", "-", "+"
     ]
 
-    const size_width = 52;
-
     return (
-        <div className="component" style={{height: props.height}}>
+        <div className="field" style={{height: 56}}>
             {operators.map((operator, index) => 
-            <InputValue
+            <Button
+              className = {"operator"}
               key = {index}
-              width = {size_width}
               value = {operator}
             />
             )}

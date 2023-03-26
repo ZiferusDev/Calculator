@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { OutputContext } from "./Fields";
+import calculate from "../logic";
 
-export default function Equals ({width, height}) {
 
+export default function Equals () {
+
+    const { output, addToOutput, clearOutput } = useContext(OutputContext);
+    console.log("Я equals и я получил: " + output);
+
+    let result = calculate(output);
 
     return (
-        <div className="component" style={{height: height, width: width}}>
-            <div className="equalSign_keeper" >
-                {"="}
-            </div>
+        <div className="equals"> 
+        {/* Переделать, когда почитаю про БЭМ */}
+            <button onClick={() => {
+                clearOutput();
+                addToOutput(result);
+            }}>
+                =
+            </button>
         </div>
     )
 }

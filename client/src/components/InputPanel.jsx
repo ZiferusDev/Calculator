@@ -1,55 +1,30 @@
-import React, {useState} from "react";
-import InputValue from "./InputValue";
-// import ReactDom from "react-dom";
+import React, {useState, useContext} from "react";
+import Button from "./Button";
+import { OutputContext } from "./Fields";
 
 export default function InputPanel (props) {
 
-    const digits = [
-        {
-            value: 7,
-        },
-        {
-            value: 8,
-        },
-        {
-            value: 9,
-        },
-        {
-            value: 4,
-        },
-        {
-            value: 5,
-        },
-        {
-            value: 6,
-        },
-        {
-            value: 1,
-        },
-        {
-            value: 2,
-        },
-        {
-            value: 3,
-        },
-        {
-            value: 0,
-            width: 152
-        },
-        {
-            value: ",",
-        }
-    ]
+    const digits = [7,8,9,4,5,6,1,2,3,0,","]  // А нужно ли это?
+
+    const { output } = useContext(OutputContext);
 
     return (
-        <div className="component" style={{height: props.height}}>
+        <div className="inputPanel">
             {
-                digits.map((digit, index) => 
-                    <InputValue 
+                digits.map((digit, index) => {
+                if(digit === 0) {
+                    return <Button className="digit_0"
+                        key = {index}
+                        value = {digit}
+                    /> // Переделать, почитав про БЭМ
+                }
+                else {
+                    return <Button className="digit"
                     key = {index}
-                    {...digit}
+                    value = {digit}
                     />
-                )
+                }
+            })
             }
         </div>
     )
