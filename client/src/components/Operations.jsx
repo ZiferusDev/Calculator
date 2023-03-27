@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "./Button";
-import { OutputContext } from "./Fields";
 
 export default function Operations (props) {
 

@@ -93,10 +93,7 @@
 
 .value_keeper {
   padding: 4px;
-  display: inline-block;
   text-align: right;
-  overflow: scroll;
-  overflow-y: hidden;
   white-space: nowrap;
   font-size: 36px;
   font-weight: 800;

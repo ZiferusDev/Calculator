@@ -1,7 +1,6 @@
 $added_grey: #E2E3E5;
 $added_blue: #5D5FEF;
 
-// Прописать стилями просто fields, не надо прокидывать в пропсы width & height
 #root {
     display: flex;
     justify-content: center;
@@ -112,13 +111,9 @@ $added_blue: #5D5FEF;
 
 .value_keeper {
     padding: 4px;
-    display: inline-block;
     text-align: right;
     
-    overflow: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    
+    white-space: nowrap;    
 
     font-size: 36px;
     font-weight: 800;

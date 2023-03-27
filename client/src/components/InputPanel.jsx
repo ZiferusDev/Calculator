@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
 import Button from "./Button";
-import { OutputContext } from "./Fields";
+import { OutputContext } from "../App";
 
 export default function InputPanel (props) {
 
