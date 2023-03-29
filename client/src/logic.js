@@ -49,9 +49,9 @@ function calculate(users_input) {
         }
     }
     
-    console.log(users_input);
+    // console.log(users_input);
 
-    return users_input.reduce((a, b) => +a + +b);
+    return users_input.reduce((a, b) => +a + +b).toFixed(2);
 
 }
 
