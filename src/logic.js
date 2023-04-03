@@ -1,12 +1,10 @@
 // Я знаю, что это реализовано ужасным способом.
 
-// Допилить запятые, 1/10 + 2/10 = 0.30000000000000004
-
 const operators_re = /x|\+|-|\//;
 
 function isStrIncorrect(str) {
-    const doubledOperators_re = /--|-\+|-\x|-\/|(x|\+|\/){2}/g;
-    return doubledOperators_re.test(str)
+    const doubledOperators_re = /-\+|-\x|-\/|(x|\+|\/|-){2}/g;
+    return doubledOperators_re.test(str) 
 }
 
 function clearEmptyCells(array) {
@@ -24,7 +22,7 @@ function parseString(str) {
 
 function calculate(users_input) {
 
-    if (isStrIncorrect(users_input)) return "Хуйню ввёл";
+    if (isStrIncorrect(users_input)) return "Input error";
 
     users_input = parseString(users_input);
     for(let i = 0; i < users_input.length; i++) {
@@ -50,8 +48,8 @@ function calculate(users_input) {
     }
     
     // console.log(users_input);
-
-    return users_input.reduce((a, b) => +a + +b).toFixed(2);
+    let result = users_input.reduce((a, b) => +a + +b).toFixed(2);
+    return isNaN(result) ? "Ошибка" : result;
 
 }
 

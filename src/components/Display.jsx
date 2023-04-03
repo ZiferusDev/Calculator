@@ -3,7 +3,7 @@ import { OutputContext } from "../App";
 
 export default function Display() {
     
-        const { output, addToOutput } = useContext(OutputContext);
+        const { output } = useContext(OutputContext);
 
     return (
         <div className="field" style={{height: 68, width: 240}}>

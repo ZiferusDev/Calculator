@@ -42,18 +42,41 @@ $added_blue: #5D5FEF;
 }
 
 .clearBtn {
-    width: 240px;
-    height: 60px;
+    width: 170px;
+    height: 48px;
 
+    border: 1px solid #E2E3E5;
+    border-radius: 6px;
+
+    background-color: white;
     cursor: pointer;
 
-    border-radius: 20px;
-    margin-bottom: 10px;
+        &:hover {
+            border: 2px solid #5D5FEF;
+        }
+        &:active {
+            color: white;
+            background-color: #5D5FEF;
+        }
+}
 
-    background-color: rgb(198, 198, 198);
+.deleteLastBtn {
+
+    width: 52px;
+    height: 48px;
+
+    border: 1px solid #E2E3E5;
+    border-radius: 6px;
+
+    background-color: white;
+    cursor: pointer;
 
         &:hover {
-            background-color: rgb(167, 166, 166);
+            border: 2px solid #5D5FEF;
+        }
+        &:active {
+            color: white;
+            background-color: #5D5FEF;
         }
 }
 
