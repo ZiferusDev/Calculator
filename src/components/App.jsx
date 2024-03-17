@@ -1,9 +1,10 @@
-import React, {useState, createContext} from "react";
-import InputPanel from "./components/InputPanel";
-import Operations from "./components/Operations";
-import Display from "./components/Display";
-import Equals from "./components/Equals";
-import ClearPanel from "./components/ClearPanel";
+import {useState, createContext} from "react";
+import InputPanel from "./InputPanel";
+import Operations from "./Operations";
+import Display from "./Display";
+import Equals from "./Equals";
+import ClearPanel from "./ClearPanel";
+import InfoPanel from "./InfoPanel";
 
 function App() {
     const [output, setOutput] = useState("");
@@ -19,10 +20,9 @@ function App() {
   
     return (
       <OutputContext.Provider value={{ output, addToOutput, clearOutput, popOutput }}>
-      {console.log("Вот твой вывод: " + output)}
         <div className="App">
+          <InfoPanel />
           <Display/>
-          {/* Вынести в отдельный компонент */}
           <ClearPanel />
           <Operations />
           <InputPanel height = {224} />

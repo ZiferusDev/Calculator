@@ -1,5 +1,3 @@
-// Я знаю, что это реализовано ужасным способом.
-
 const operators_re = /x|\+|-|\//;
 
 function isStrIncorrect(str) {
@@ -26,7 +24,6 @@ function calculate(users_input) {
 
     users_input = parseString(users_input);
     for(let i = 0; i < users_input.length; i++) {
-        // console.log(users_input, "\n", users_input[i]);
         switch(users_input[i]) {
             case "/":
                 if (users_input[i+1] === "0") return "Ошибка! /0"
@@ -47,13 +44,9 @@ function calculate(users_input) {
         }
     }
     
-    // console.log(users_input);
     let result = users_input.reduce((a, b) => +a + +b).toFixed(2);
     return isNaN(result) ? "Ошибка" : result;
 
 }
-
-// console.log(calculate("/8"));
-// console.log(calculate("-24/12x10-10x15+22x-10+,1000"));
 
 export default calculate;

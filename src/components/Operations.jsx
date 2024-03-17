@@ -1,7 +1,6 @@
-import React from "react";
 import Button from "./Button";
 
-export default function Operations (props) {
+export default function Operations () {
 
     const operators = [
         "/", "x", "-", "+"

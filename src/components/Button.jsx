@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
-import { OutputContext } from "../App";
-
+import { useContext } from "react";
+import { OutputContext } from "./App";
 
 export default function Button (props) {
 
